@@ -1,0 +1,14 @@
+{
+  "name": "katas",
+  "version": "1.0.0",
+  "description": "Bonjour, voici le readme, juste pour dire que Loic est éclaté en code et Matisse je ne sais pas ce qu'il faut en dev",
+  "main": "loic.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
