@@ -6,7 +6,9 @@ function nombrePair(nombre) {
     };
 }
 
-console.log(4);
+console.log(nombrePair(4));
+
+
 // Fonction pour inverser une chaîne de caractères
 function inverserChaine() {
     // Récupérer la valeur de l'input
