@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculateur de Factorielle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculateur de Factorielle</h1>
+        <form id="factorialForm">
+            <label for="numberInput">Entrez un nombre :</label>
+            <input type="number" id="numberInput" min="0" required>
+            <button type="submit">Calculer</button>
+        </form>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function factorielle(n) {
+            if (n < 0) {
+                return "Le nombre doit être positif";
+            }
+            if (n === 0 || n === 1) {
+                return 1;
+            }
+            return n * factorielle(n - 1);
+        }
+
+        document.getElementById('factorialForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const number = parseInt(document.getElementById('numberInput').value);
+            const resultDiv = document.getElementById('result');
+            if (isNaN(number) || number < 0) {
+                resultDiv.textContent = "Veuillez entrer un nombre valide.";
+            } else {
+                const result = factorielle(number);
+                resultDiv.textContent = `La factorielle de ${number} est ${result}.`;
+            }
+        });
+    </script>
+</body>
+</html>
